@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i; botRegexS = /^\/schedule/; botRegexRules = /^\/rules/
-      botRegexsma=/^\/sma/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
+      botRegexsma=/^\/sma/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botchoke = /^/choke/; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -74,9 +74,9 @@ function respond() {
     postMessage("https://docs.google.com/spreadsheets/d/1kJqQWCq3RKiTrd4f71FFNKr-Y0ppJzjk0fSF0rP6Bto/edit?usp=sharing");
     this.res.end();
   } 
-  else if(request.text && botODB.test(request.text)) {
+  else if(request.text && botchoke.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("OBJ*");
+    postMessage("http://vignette3.wikia.nocookie.net/uncyclopedia/images/c/ce/Reggie-miller-choke.jpg/revision/latest?cb=20110125062146");
     this.res.end();
   } 
   else if(request.text && botDuck.test(request.text)) {
