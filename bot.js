@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i; botRegexS = /^\/schedule/; botRegexRules = /^\/rules/
-      botRegexsma=/^\/sma/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botchoke = /^/choke/; botDuck = /^\/duck/;
+      botRegexsma=/^\/sma/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botchoke = /^\/choke/; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
