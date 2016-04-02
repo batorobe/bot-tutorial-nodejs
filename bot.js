@@ -66,7 +66,7 @@ function respond() {
   } 
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("¯\\_(ツ)_/¯");
+    postMessage("https://media.giphy.com/media/ISRyUCU5i8J4k/giphy.gif");
     this.res.end();
   } 
   else if(request.text && botRegexWk.test(request.text)) {
