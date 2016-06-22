@@ -20,7 +20,7 @@ function respond() {
     this.res.end();
   } 
   
-  else if {
+  else if(request.text && botRegexDenk.test(request.text)){
     this.writeHead(200);
     postMessage("https://www.youtube.com/playlist?list=PLFPwGmnS_lyyVY5qjqZmHGbyr8doP0PH2");
     this.res.end();
