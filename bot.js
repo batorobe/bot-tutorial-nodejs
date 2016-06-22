@@ -23,7 +23,7 @@ function respond() {
   
   else if(request.text && botRegexDenk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/SRMFL/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("https://www.youtube.com/playlist?list=PLFPwGmnS_lyyVY5qjqZmHGbyr8doP0PH2");
     this.res.end();
   } 
   else if(request.text && botRegexDL.test(request.text)) {
