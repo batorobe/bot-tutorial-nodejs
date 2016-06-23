@@ -12,8 +12,8 @@ function respond() {
       botRegexWil = /^\/.willy/;
       
       //images for maga call
-      maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'http://trumpimages.com/TqfJA.jpg';
-      maga3 = 'http://trumpimages.com/YECTD.jpg'; maga4 = 'https://i.redditmedia.com/3ajTo756OzvESMhS1uvrz4GfRgIaD-IjFrua8uHZasc.jpg?w=349&s=54ca7e69b999bd9d60ce33610b38cfee';
+      maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'https://i.sli.mg/uMm4cN.jpg';
+      maga3 = 'https://i.redditmedia.com/3ajTo756OzvESMhS1uvrz4GfRgIaD-IjFrua8uHZasc.jpg?w=349&s=54ca7e69b999bd9d60ce33610b38cfee';
       maga5 = 'https://i.sli.mg/l2knjY.jpg';
  
   if(request.text && botRegex.test(request.text)) {
