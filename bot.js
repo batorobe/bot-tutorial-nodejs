@@ -22,16 +22,16 @@ function respond() {
     this.res.end();
   } 
   
-  else if(request.text && botRegexMaga.test(request.text)) {
+/*  else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
     if(0.6 >= Math.random() > 0.3)
       postMessage(maga1);
     else if(Math.random() >0.6)
       postMessage(maga2);
     else
-      postMessage(siege3);
+      postMessage(maga3);
     this.res.end();
-  } 
+  } */ 
   
   else if(request.text && botRegexWil.test(request.text)) {
     this.res.writeHead(200);
