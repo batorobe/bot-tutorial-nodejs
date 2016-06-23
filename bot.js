@@ -26,21 +26,12 @@ function respond() {
   
 /*  else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
-        if(0.0 >= Math.random() =< 0.2){
-          postMessage(maga1);
-        }
-        else if(0.21 >= Math.random() =< 0.5){
-         postMessage(maga2);
-        }
-        else if(0.51 >= Math.random() =< 0.7){
-         postMessage(maga3);
-        }
-        else if(0.71 >= Math.random() =< 0.89){
-          postMessage(maga4);
-        }
-        else{
-          postMessage(maga5);
-        }
+    if(0.6 >= Math.random() > 0.3)
+      postMessage(maga1);
+    else if(Math.random() >0.6)
+      postMessage(maga2);
+    else
+      postMessage(siege3);
     this.res.end();
   } */
   
