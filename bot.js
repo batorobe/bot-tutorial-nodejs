@@ -30,7 +30,7 @@ function respond() {
           postMessage(maga1);
         }
         else if(0.21 >= Math.random() =< 0.5){
-         postMessage(maga2)
+         postMessage(maga2);
         }
         else if(0.51 >= Math.random() =< 0.7){
          postMessage(maga3);
