@@ -34,9 +34,9 @@ function respond() {
       postMessage(maga3);
     else if(0.71 > Math.random() < 0.89)
       postMessage(maga4);
-    this.res.end();
     else
       postMessage(maga5);
+    this.res.end();
   }
   
   else if(request.text && botRegexWil.test(request.text)) {
