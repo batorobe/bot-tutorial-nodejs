@@ -24,7 +24,7 @@ function respond() {
     this.res.end();
   } 
   
-  else if(request.text && botRegexMaga.test(request.text)) {
+/*  else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
     if(0.0 >= Math.random() =< 0.2)
       postMessage(maga1);
@@ -37,7 +37,7 @@ function respond() {
     else
       postMessage(maga5);
     this.res.end();
-  }
+  } */
   
   else if(request.text && botRegexWil.test(request.text)) {
     this.res.writeHead(200);
