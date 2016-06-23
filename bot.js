@@ -8,16 +8,15 @@ function respond() {
       botRegex = /(mfw)|(tfw)|(Mfw)|(MFW)|(Tfw)|(TFW)/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/;
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/; botRegexOW = /^\/overwatch/; 
       botRegexDenk = /^\.denk/;
       botRegexGamb = /^\.potd/;
       botRegexMaga = /(maga)|(MAGA)|(Maga)|(kek)|(Kek)|(top kek)|(Top kek)|(Top Kek)/;
       botRegexWil = /^\/.willy/;
-      siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
-      siege3 = 'https://i.groupme.com/960x960.png.006e180e05d841c6a2962e844bf1e6fd';
-  var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
-                ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
-                "MIA","BUF","SF","WAS","NYJ","TB"]
+      
+      //images for maga call
+      maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'http://trumpimages.com/TqfJA.jpg'
+      maga3 = 'http://trumpimages.com/YECTD.jpg'; maga4 = 'https://i.redditmedia.com/3ajTo756OzvESMhS1uvrz4GfRgIaD-IjFrua8uHZasc.jpg?w=349&s=54ca7e69b999bd9d60ce33610b38cfee';
+      maga5 = 'https://i.sli.mg/l2knjY.jpg'
  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -27,8 +26,17 @@ function respond() {
   
   else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://i.imgur.com/vVjHJUJ.png");
+    if(0.0 >= Math.random() < 0.2)
+      postMessage(maga1);
+    else if(0.3 > Math.random() < 0.5)
+      postMessage(maga2)
+    else if(0.51 > Math.random() < 0.7)
+      postMessage(maga3);
+    else if(0.71 > Math.random() < 0.89)
+      postMessage(maga4);
     this.res.end();
+    else
+      postMessage(maga5);
   }
   
   else if(request.text && botRegexWil.test(request.text)) {
@@ -127,16 +135,7 @@ function respond() {
     postMessage("https://i.groupme.com/851x1184.jpeg.330228901f684b0cb46cd1cef6953923");
     this.res.end();
   }
-  else if(request.text && botRegexSiege.test(request.text)) {
-    this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
-      postMessage(siege1);
-    else if(Math.random() >0.6)
-      postMessage(siege3)
-    else
-      postMessage(siege2);
-    this.res.end();
-  }
+  
   
   else {
     console.log("don't care");
