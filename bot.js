@@ -24,17 +24,16 @@ function respond() {
   
   else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
-    if(0.01 >= Math.random() < 0.2)
-      postMessage(maga1);
-    else if(0.21 >= Math.random() < 0.4)
+    if(Math.random() > .01 && Math.random() <= .2)
       postMessage(maga2);
-    else if(0.41 >= Math.random() < 0.6)
+    else if(Math.random() > .2 && Math.random() <= .4)
       postMessage(maga3);
-    else if(0.61 >= Math.random() < 0.8)
-      postMessage(maga4);
-    else
+    else if(Math.random() > .4 && Math.random() <= .6)
       postMessage(maga5);
-    this.res.end();
+    else if(Math.random() > .6 && Math.random() <= .8)
+      postMessage(maga5);
+    else
+      postMessage(maga1);
   }  
   
   else if(request.text && botRegexWil.test(request.text)) {
