@@ -8,7 +8,7 @@ function respond() {
       botRegex = /(mfw)|(tfw)|(Mfw)|(MFW)|(Tfw)|(TFW)/;
       botRegexDenk = /^\.denk/;
       botRegexGamb = /^\.potd/;
-      botRegexMaga = /(maga)|(MAGA)|(Maga)|(kek)|(Kek)|(top kek)|(Top kek)|(Top Kek)/;
+      botRegexMaga = /(maga)|(MAGA)|(Maga)/;
       botRegexWil = /^\/.willy/;
       
       //images for maga call
@@ -24,12 +24,16 @@ function respond() {
   
   else if(request.text && botRegexMaga.test(request.text)) {
     this.res.writeHead(200);
-    if(0.6 >= Math.random() > 0.3)
+    if(0.01 >= Math.random() < 0.2)
       postMessage(maga1);
-    else if(Math.random() >0.6)
+    else if(0.21 >= Math.random() < 0.4)
       postMessage(maga2);
-    else
+    else if(0.41 >= Math.random() < 0.6)
       postMessage(maga3);
+    else if(0.61 >= Math.random() < 0.8)
+      postMessage(maga4);
+    else
+      postMessage(maga5);
     this.res.end();
   }  
   
