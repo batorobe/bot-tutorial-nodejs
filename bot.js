@@ -24,9 +24,10 @@ function respond() {
     this.res.end();
   } 
   
-  else if(request.txt && botRegexKek.test(request.text)){
+  else if(request.text && botRegexKek.test(request.text)){
     this.res.writeHead(200);
-    postMessage("PRAISE KEK!");
+    postMessage("PRAISE KEK");
+    this.res.end();
   }
 
   else if(request.text && botRegexCon.test(request.text)){
