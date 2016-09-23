@@ -11,6 +11,7 @@ function respond() {
       botRegexMaga = /(maga)|(MAGA)|(Maga)/;
       botRegexWil = /^\/.willy/;
       botRegexCon = /(syrup)|(Syrup)/;
+      botRegexKek = /(kek)|(top kek)|(Kek)/;
       
       //images for maga call
       maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'https://i.sli.mg/uMm4cN.jpg';
@@ -22,6 +23,11 @@ function respond() {
     postMessage(cool());
     this.res.end();
   } 
+  
+  else if(request.txt && botRegexKek.test(request.text)){
+    this.res.writeHead(200);
+    postMessage("PRAISE KEK!");
+  }
 
   else if(request.text && botRegexCon.test(request.text)){
     this.res.writeHead(200);
