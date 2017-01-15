@@ -162,7 +162,7 @@ function respond() {
   }
   else if(request.text && botRegexSchedule.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/spreadsheets/d/1EORExkB6HNLZhi22mRo2Xmo6Yx90Em2rGNAYlAdjTeI/edit?usp=drive_web");
+    postMessage("https://www.daddyleagues.com/ams/schedules");
     this.res.end();
   }
   
