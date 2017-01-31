@@ -27,7 +27,7 @@ function respond() {
   
   else if(request.text && botRegexSrd.test(request.text)){
     this.res.writeHead(200);
-    postMessage(":D OK");
+    postMessage("http://imgur.com/a/mPA4E");
     this.res.end();
   }
   
