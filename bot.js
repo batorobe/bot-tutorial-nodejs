@@ -12,6 +12,7 @@ function respond() {
       botRegexWil = /^\/.willy/;
       botRegexCon = /(syrup)|(Syrup)/;
       botRegexKek = /(kek)|(top kek)|(Kek)/;
+      botRegexsrd = /(srd)|(-srd)|(Srd)/;
       
       //images for maga call
       maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'https://i.sli.mg/uMm4cN.jpg';
@@ -23,6 +24,12 @@ function respond() {
     postMessage(cool());
     this.res.end();
   } 
+  
+  else if(request.text && botRegexsrd.test(request.text)){
+    this.res.writeHead(200);
+    postMessage("-sameroom disable");
+    this.res.end();
+  }
   
   else if(request.text && botRegexKek.test(request.text)){
     this.res.writeHead(200);
