@@ -27,7 +27,7 @@ function respond() {
   
   else if(request.text && botRegexSrd.test(request.text)){
     this.res.writeHead(200);
-    postMessage("-sameroom disable");
+    postMessage(":D OK");
     this.res.end();
   }
   
