@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /bot/;  botRegexDL = /titan/;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegex = /(B|b)ot/;  botRegexDL = /(T|t)itan/;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("here");
@@ -13,8 +13,7 @@ function respond() {
   }
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
-    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("ishebackyet?");
+    postMessage("#ishebackyet?");
     this.res.end();
   } 
   
