@@ -32,7 +32,7 @@ function respond() {
     postMessage("https://docs.google.com/spreadsheets/d/1sJtSVnjhhRNxpiuMR5uXrsTlrsXMjp9TNO7JHDXhtsk/htmlview?pli=1");
     this.res.end();
   }  
-  else if(request.text && botRegexAr.test(request.text)) {
+  else if(request.text && botRegexPr.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/13oEg8HzEB11-il7o4mBDUpPx-s2hnPvRa1PSMgpxyYE/edit?usp=sharing");
     this.res.end();
