@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(.*)(B|b)ot(.*)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
-  botRegexPr = /(.*)(F|f)uck (Y|y)ou(.*)/;
+  botRegexPr = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexGr = /(.*)(G|g)root(.*)/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage("#here");
@@ -41,6 +41,11 @@ function respond() {
   else if(request.text && botRegexFu.test(request.text)) {
     this.res.writeHead(200);
     postMessage("#Me?? Fuq you!");
+    this.res.end();
+  }  
+  else if(request.text && botRegexGr.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("#iamgroot");
     this.res.end();
   } 
   
