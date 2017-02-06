@@ -5,26 +5,31 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /(B|b)ot/;  botRegexDL = /(T|t)itan/;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+      botRegex = /.(B|b)ot./;  botRegexTi = /.(T|t)itan./;botRegexBi = /.(B|b)itch./;botRegexBk = /.(B|b)oss killer./
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("here");
+    postMessage("#here");
     this.res.end();
   }
-  else if(request.text && botRegexDL.test(request.text)) {
+  else if(request.text && botRegexTi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#ishebackyet?");
+    postMessage("#hebackyet?");
     this.res.end();
   } 
   
-  else if(request.text && botRegexSalt.test(request.text)) {
+  else if(request.text && botRegexBi.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://i.imgur.com/B5BSVqH.png");
+    postMessage("#thatbih");
     this.res.end();
   } 
-  else if(request.text && botRegexRules.test(request.text)) {
+  else if(request.text && botRegexBk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/document/d/1hSuEG7oplnx4IX6HGsMOjsWb9TCqC4-F1NLjuBz5PCM/edit");
+    postMessage("#bosskillah");
+    this.res.end();
+  }  
+  else if(request.text && botRegexAr.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1sJtSVnjhhRNxpiuMR5uXrsTlrsXMjp9TNO7JHDXhtsk/htmlview?pli=1");
     this.res.end();
   } 
   
