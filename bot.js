@@ -5,8 +5,8 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexArena = /(*)(A|a)arena cutoff(*)/;  botRegexAbassbot = /(*)(B|b)ot(*)/; botRegexTitan = /(*)(T|t)itan/
-      botRegexBK=/(*)(B|b)oss (K|k)iller/;botRegexBI = /(*)(B|b)itch/; 
+      botRegexArena = /(A|a)arena cutoff/;  botRegexAbassbot = /(B|b)ot/; botRegexTitan = /(T|t)itan/
+      botRegexBK=/(B|b)oss (K|k)iller/;botRegexBI = /(B|b)itch/; 
   if(request.text && botRegexArena.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/1sJtSVnjhhRNxpiuMR5uXrsTlrsXMjp9TNO7JHDXhtsk/htmlview?pli=1");
