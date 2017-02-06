@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegexArena = /(A|a)arena cutoff/;  botRegexAbassbot = /(B|b)ot/; botRegexTitan = /(T|t)itan/
+      botRegexArena = /(A|a)arena cutoff/;botRegexTitan = /(T|t)itan/;
       botRegexBK=/(B|b)oss (K|k)iller/;botRegexBI = /(B|b)itch/; 
   if(request.text && botRegexArena.test(request.text)) {
     this.res.writeHead(200);
@@ -27,16 +27,7 @@ function respond() {
     postMessage(/#thatbih/);
     this.res.end();
   }
-  else if(request.text && botRegexKys.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://www.wikihow.com/Tie-a-Noose");
-    this.res.end();
-  } 
-  else if(request.text && botRegexSlam.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("https://pbs.twimg.com/profile_images/587294731471757313/ZpI5PfKq.jpg");
-    this.res.end();
-  } 
+  
   else if(request.text && botRegexDaf.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
@@ -50,7 +41,7 @@ function respond() {
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
     var phrase = chooseRandom(phraseArray);
-  
+}
     this.res.writeHead(200);
     postMessage(phraseArray);
     this.res.end();
