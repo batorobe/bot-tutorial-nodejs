@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
-  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /Graves/;
+  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)rah(.*)/;
   var phraseArray = [ "#?",
                     "#wtf",
                     "#saymyname",
@@ -18,6 +18,19 @@ function respond() {
                     "#thatswhatshesaid",
                     "#here" ];
   var phrase = chooseRandom(phraseArray);
+  var phraseArray2 = [ "#2fast",
+                    "#2furious",
+                    "#ask any racer. any real racer",
+                    "#for those 10 seconds or less, I'm free",
+                    "#i'll havae the tuna. no crust",
+                    "#still a buster",
+                    "#ejecto seato, cuz!",
+                    "#too soon, junior",
+                    "#it's a ho-asis in here, brah",
+                    "#rideordie",
+                    "#i never nar'd on nobody",
+                    "#overnight parts from japan" ];
+  var phrase2 = chooseRandom(phraseArray2);
   var rannum = getRandomInt(1,10);
   var hgnum = rannum;
   
@@ -65,6 +78,11 @@ function respond() {
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
+    this.res.end();
+  } 
+  else if(request.text && botRegexFf.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage(phrase2);
     this.res.end();
   }
   else {
