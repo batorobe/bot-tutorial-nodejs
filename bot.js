@@ -64,7 +64,7 @@ function respond() {
   } 
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(hgnum);
+    postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
     this.res.end();
   }
   else {
