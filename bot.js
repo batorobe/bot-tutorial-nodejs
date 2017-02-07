@@ -88,7 +88,7 @@ function respond() {
   } 
   else if(request.text && botRegexDo.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("GO: 170k\nBC:46k\nLO:15k");
+    postMessage("GO: 170k\nBC: 46k\nLO: 15k");
     this.res.end();
   }
   else {
