@@ -18,7 +18,7 @@ function respond() {
                     "#thatswhatshesaid",
                     "#here" ];
   var phrase = chooseRandom(phraseArray);
-  var randomint = getRandomInt(1,10);
+  var hgnum = getRandomInt(1,10);
   
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -63,7 +63,7 @@ function respond() {
   } 
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(randomint);
+    postMessage(hgnum);
     this.res.end();
   }
   else {
