@@ -7,9 +7,21 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
   botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;
+  var phraseArray = [ "#?",
+                    "#wtf",
+                    "#saymyname",
+                    "#24msgs",
+                    "#omv",
+                    "#stop",
+                    "#legend",
+                    "#itemuseisn'trequired",
+                    "#thatswhatshesaid",
+                    "#here" ];
+  var phrase = chooseRandom(phraseArray);
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("#here");
+    postMessage(phrase);
     this.res.end();
   }
   else if(request.text && botRegexTi.test(request.text)) {
@@ -88,6 +100,10 @@ function postMessage(response) {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
+}
+
+function chooseRandom(myArray) {
+  return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
 function getRandomInt(min, max) {
