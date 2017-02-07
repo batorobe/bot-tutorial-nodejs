@@ -7,6 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
   botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /\^Graves$/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
+  botRegexDo = /\/(D|d)onations/;
   var phraseArray = [ "#?",
                     "#wtf",
                     "#saymyname",
@@ -83,6 +84,11 @@ function respond() {
   else if(request.text && botRegexFf.test(request.text)) {
     this.res.writeHead(200);
     postMessage(phrase2);
+    this.res.end();
+  } 
+  else if(request.text && botRegexDo.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("GO: 170k\nBC:46k\nLO:15k);
     this.res.end();
   }
   else {
