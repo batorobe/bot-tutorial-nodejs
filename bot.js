@@ -63,7 +63,7 @@ function respond() {
   } 
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(hgnum);
+    postMessage("9");
     this.res.end();
   }
   else {
