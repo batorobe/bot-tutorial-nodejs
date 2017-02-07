@@ -18,7 +18,7 @@ function respond() {
                     "#thatswhatshesaid",
                     "#here" ];
   var phrase = chooseRandom(phraseArray);
-  var randomint = getrandomint(1,10);
+  var randomint = getRandomInt(1,10);
   
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
