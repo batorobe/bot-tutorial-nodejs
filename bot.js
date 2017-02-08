@@ -80,7 +80,7 @@ function respond() {
     this.res.end();
   } 
   else if(request.text && botRegexHg.test(request.text)) {
-    if(phrase3 = "5") {
+    if(phrase3 = 5) {
       this.res.writeHead(200);
       postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
       this.res.end();
