@@ -1,13 +1,16 @@
 var HTTPS = require('https');
-var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
-  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
-  botRegexDo = /\/(D|d)onations/;
+
+  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/
+  botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
+  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
+  botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
+  botRegex63 = /\/(M|m)ap6[.]3$/;
+
   var phraseArray = [ "#?",
                     "#wtf",
                     "#saymyname",
@@ -16,9 +19,8 @@ function respond() {
                     "#stop",
                     "#legend",
                     "#iamgroot",
-                    "#thatswhatshesaid",
-                     "#titan??",
-                     "#rockchalk",
+                    "#titan??",
+                    "#telomere",
                     "#here" ];
   var phrase = chooseRandom(phraseArray);
   var phraseArray2 = [ "#2fast",
@@ -34,12 +36,7 @@ function respond() {
                     "#i never nar'd on nobody",
                     "#overnight parts from japan" ];
   var phrase2 = chooseRandom(phraseArray2);
-  var phraseArray3 = [ "1",
-                     "2",
-                     "3",
-                     "4",
-                     "5",];
-  var phrase3 = chooseRandom(phraseArray3);
+
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(phrase);
@@ -75,12 +72,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("#Me?? Fuq you!");
     this.res.end();
-  } 
-  else if(request.text && botRegexAs.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("#ahh");
-    this.res.end();
-  } 
+  }
   else if(request.text && botRegexHg.test(request.text)) {
     this.res.writeHead(200);
     if(Math.random() >= 0.9)
@@ -95,6 +87,27 @@ function respond() {
   else if(request.text && botRegexDo.test(request.text)) {
     this.res.writeHead(200);
     postMessage("GO: 170k\nBC: 46k\nLO: 15k");
+    this.res.end();
+  }
+  else if(request.text && botRegex6.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6en.jpg");
+    postMessage("https://docs.google.com/spreadsheets/d/1qi-3KOfLnI0c4YL4b9CB85e1OXw4HmtaVaCbbUR4aOs/htmlview");
+    this.res.end();
+  }
+  else if(request.text && botRegex61.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-1en.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegex62.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-2en.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegex63.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-3en.jpg");
     this.res.end();
   }
   else {
