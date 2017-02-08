@@ -80,9 +80,10 @@ function respond() {
     this.res.end();
   } 
   else if(request.text && botRegexHg.test(request.text)) {
-      this.res.writeHead(200);
-      postMessage(phrase3);
-      this.res.end();
+      if phrase3 = "5"
+        this.res.writeHead(200);
+        postMessage(phrase3);
+        this.res.end();
   } 
   else if(request.text && botRegexFf.test(request.text)) {
     this.res.writeHead(200);
