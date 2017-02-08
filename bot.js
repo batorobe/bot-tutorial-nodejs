@@ -6,7 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/;botRegexBk = /(.*)(B|b)oss killer(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/
-  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /\^Graves$/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
+  botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexAs = /(\s|^)(A|a)ss(\s|$)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
   botRegexDo = /\/(D|d)onations/;
   var phraseArray = [ "#?",
                     "#wtf",
@@ -32,9 +32,12 @@ function respond() {
                     "#i never nar'd on nobody",
                     "#overnight parts from japan" ];
   var phrase2 = chooseRandom(phraseArray2);
-  var rannum = getRandomInt(1,10);
-  var hgnum = rannum;
-  
+  var phraseArray3 = [ "1",
+                     "2",
+                     "3",
+                     "4",
+                     "5",];
+  var phrase3 = chooseRandom(phraseArray3);
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(phrase);
@@ -77,9 +80,11 @@ function respond() {
     this.res.end();
   } 
   else if(request.text && botRegexHg.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
-    this.res.end();
+    if phrase3 = "5" {
+      this.res.writeHead(200);
+      postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
+      this.res.end();
+    }
   } 
   else if(request.text && botRegexFf.test(request.text)) {
     this.res.writeHead(200);
