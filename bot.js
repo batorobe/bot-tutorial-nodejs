@@ -79,11 +79,15 @@ function respond() {
     postMessage("#ahh");
     this.res.end();
   } 
-  else if(request.text && botRegexHg.test(request.text)) {
+  else if(request.text && botRegexSiege.test(request.text)) {
     this.res.writeHead(200);
-      if(math.random() > .6)
-        postMessage(phrase3);
-        this.res.end();
+    if(0.6 >= Math.random() > 0.3)
+      postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
+    else if(Math.random() >0.6)
+      postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png")
+    else
+      postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
+    this.res.end();
   } 
   else if(request.text && botRegexFf.test(request.text)) {
     this.res.writeHead(200);
