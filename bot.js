@@ -4,11 +4,13 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/
+
+  botRegex = /(\s|^)(B|b)ot(\s|$)/;  botRegexTi = /(.*)(T|t)itan(.*)/;botRegexBi = /(.*)(B|b)itch(.*)/
   botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
   botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
   botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
   botRegex63 = /\/(M|m)ap6[.]3$/;
+
   var phraseArray = [ "#?",
                     "#wtf",
                     "#saymyname",
@@ -34,7 +36,7 @@ function respond() {
                     "#i never nar'd on nobody",
                     "#overnight parts from japan" ];
   var phrase2 = chooseRandom(phraseArray2);
-  
+
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(phrase);
