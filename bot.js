@@ -17,6 +17,8 @@ function respond() {
                     "#legend",
                     "#iamgroot",
                     "#thatswhatshesaid",
+                     "#titan??",
+                     "#rockchalk",
                     "#here" ];
   var phrase = chooseRandom(phraseArray);
   var phraseArray2 = [ "#2fast",
