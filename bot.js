@@ -79,7 +79,7 @@ function respond() {
     postMessage("#ahh");
     this.res.end();
   } 
-  else if(request.text && botRegexHg.test(request.text) && phrase3=2) {
+  else if(request.text && botRegexHg.test(request.text) && phrase3="2") {
       this.res.writeHead(200);
       postMessage("http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png");
       this.res.end();
