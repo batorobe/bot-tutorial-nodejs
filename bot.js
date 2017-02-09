@@ -9,32 +9,31 @@ function respond() {
   botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
   botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
   botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
-  botRegex63 = /\/(M|m)ap6[.]3$/;
+  botRegex63 = /\/(M|m)ap6[.]3$/;botRegexLe = /\/(L|l)egend$/;
 
-  var phraseArray = [ "#?",
+  var phraseArray = ["#?",
                     "#wtf",
                     "#saymyname",
                     "#24msgs",
                     "#omv",
-                    "#stop",
                     "#legend",
                     "#iamgroot",
-                    "#titan??",
                     "#telomere",
-                    "#here" ];
+                     "http://pix.iemoji.com/images/emoji/apple/ios-9/256/lion-face.png",
+                    "#here"];
   var phrase = chooseRandom(phraseArray);
-  var phraseArray2 = [ "#2fast",
+  var phraseArray2 = ["#2fast",
                     "#2furious",
                     "#ask any racer. any real racer",
                     "#for those 10 seconds or less, I'm free",
-                    "#i'll havae the tuna. no crust",
+                    "#i'll have the tuna. no crust",
                     "#still a buster",
                     "#ejecto seato, cuz!",
                     "#too soon, junior",
                     "#it's a ho-asis in here, brah",
                     "#rideordie",
-                    "#i never nar'd on nobody",
-                    "#overnight parts from japan" ];
+                    "#i never narc'd on nobody",
+                    "#overnight parts from japan"];
   var phrase2 = chooseRandom(phraseArray2);
 
   if(request.text && botRegex.test(request.text)) {
@@ -108,6 +107,11 @@ function respond() {
   else if(request.text && botRegex63.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://marvelbitvachempionov.ru/wp-content/uploads/maps/aqmap6-3en.jpg");
+    this.res.end();
+  }
+  else if(request.text && botRegexLe.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://community.kabam.com/forums/showthread.php?650203-Hall-of-Legends&p=3307845#post3307845");
     this.res.end();
   }
   else {
