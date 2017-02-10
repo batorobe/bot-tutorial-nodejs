@@ -9,7 +9,7 @@ function respond() {
   botRegexBk = /(.*)(B|b)oss kill(.*)/;botRegexAr = /(.*)(A|a)rena cutoff(.*)/;botRegexPr = /(.*)(P|p)restige link(.*)/;
   botRegexFu = /(.*)(F|f)uck (Y|y)ou(.*)/;botRegexHg = /Graves/;botRegexFf = /(.*)(B|b)(R|r)(A|a|U|u)(H|h)(.*)/;
   botRegexDo = /\/(D|d)onations/;botRegex6 = /\/(M|m)ap6$/;botRegex61 = /\/(M|m)ap6[.]1$/;botRegex62 = /\/(M|m)ap6[.]2$/;
-  botRegex63 = /\/(M|m)ap6[.]3$/;botRegexLe = /\/(L|l)egend$/;
+  botRegex63 = /\/(M|m)ap6[.]3$/;botRegexLe = /\/(L|l)egend$/;botRegexSc = /(\s|^)(S|s)crew (Y|y)ou(\s|$)/;
 
   var phraseArray = ["#?",
                     "#wtf",
@@ -112,6 +112,11 @@ function respond() {
   else if(request.text && botRegexLe.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://community.kabam.com/forums/showthread.php?650203-Hall-of-Legends&p=3307845#post3307845");
+    this.res.end();
+  }
+  else if(request.text && botRegexSc.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://s-media-cache-ak0.pinimg.com/564x/cb/91/72/cb9172eba64a409ebc3422a3c22ba6e7.jpg");
     this.res.end();
   }
   else {
