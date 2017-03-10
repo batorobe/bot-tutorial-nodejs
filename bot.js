@@ -11,9 +11,9 @@ function respond() {
       botRegexMaga = /(maga)|(MAGA)|(Maga)/;
       botRegexWil = /^\/.willy/;
       botRegexCon = /(syrup)|(Syrup)/;
-      botRegexKek = /(kek)|(top kek)|(Kek)|(^.^)/;
+      botRegexKek = /(kek)|(top kek)|(Kek)/;
       botRegexSrd = /(srd)|(-srd)|(Srd)/;
-      botRegexLoam = /(Liam)|(liam)|(leeum)|(Leeum)|(loam)|(Loam)/;
+      botRegexLoam = /(Liam)|(liam)|(leeum)|(Leeum)|(loam)|(Loam)|(@^.^)/;
       
       //images for maga call
       maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'https://i.sli.mg/uMm4cN.jpg';
