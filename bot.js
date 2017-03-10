@@ -11,7 +11,7 @@ function respond() {
       botRegexMaga = /(maga)|(MAGA)|(Maga)/;
       botRegexWil = /^\/.willy/;
       botRegexCon = /(syrup)|(Syrup)/;
-      botRegexKek = /(kek)|(top kek)|(Kek)/;
+      botRegexKek = /(kek)|(top kek)|(Kek)|(^.^)/;
       botRegexSrd = /(srd)|(-srd)|(Srd)/;
       botRegexLoam = /(Liam)|(liam)|(leeum)|(Leeum)|(loam)|(Loam)/;
       
