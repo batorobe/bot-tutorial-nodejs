@@ -13,6 +13,7 @@ function respond() {
       botRegexCon = /(syrup)|(Syrup)/;
       botRegexKek = /(kek)|(top kek)|(Kek)/;
       botRegexSrd = /(srd)|(-srd)|(Srd)/;
+      botRegexLoam = /(Liam)|(liam)|(leeum)|(Leeum)|(loam)|(Loam)/;
       
       //images for maga call
       maga1 = 'https://i.sli.mg/E3BbKK.jpg'; maga2 = 'https://i.sli.mg/uMm4cN.jpg';
@@ -40,6 +41,12 @@ function respond() {
   else if(request.text && botRegexCon.test(request.text)){
     this.res.writeHead(200);
     postMessage("Connor is a fucko.");
+    this.res.end();
+  }
+ 
+  else if(request.text && botRegexLoam.test(request.text)){
+    this.res.writeHead(200);
+    postMessage("Liam is 12 amirite? HAHAHAHA!");
     this.res.end();
   }
   
