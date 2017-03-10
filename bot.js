@@ -46,7 +46,7 @@ function respond() {
  
   else if(request.text && botRegexLoam.test(request.text)){
     this.res.writeHead(200);
-    postMessage("Liam is 12 amirite? HAHAHAHA!");
+    postMessage("Suj");
     this.res.end();
   }
   
