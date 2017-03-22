@@ -35,7 +35,7 @@ function respond() {
   
     else if(request.text && botRegexJay.test(request.text)){
     this.res.writeHead(200);
-    postMessage("Jay is gay.");
+    postMessage("(J)ay is gay.");
     this.res.end();
   }
   
