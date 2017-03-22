@@ -6,6 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(mfw)|(tfw)|(Mfw)|(MFW)|(Tfw)|(TFW)/;
+      botRegexJay = /(jay)|(Jay)/;
       botRegexDenk = /^\.denk/;
       botRegexGamb = /^\.potd/;
       botRegexMaga = /(maga)|(MAGA)|(Maga)/;
@@ -29,6 +30,12 @@ function respond() {
   else if(request.text && botRegexSrd.test(request.text)){
     this.res.writeHead(200);
     postMessage("http://imgur.com/aBtyVin");
+    this.res.end();
+  }
+  
+    else if(request.text && botRegexJay.test(request.text)){
+    this.res.writeHead(200);
+    postMessage("Jay is gay.");
     this.res.end();
   }
   
